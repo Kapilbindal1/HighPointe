@@ -51,11 +51,11 @@ function App() {
           <NavbarBrand href="/">
             <img className="logo" src={logo} alt="logo" />
           </NavbarBrand>
-          <NavbarToggler onClick={function noRefCheck() {}} />
+          <NavbarToggler onClick={function noRefCheck() { }} />
           <Collapse navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink href="/components/">Homes</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">
@@ -186,7 +186,7 @@ function App() {
             </Col>
             <Col md={8} className="faq-content">
               <h3 className="title-head">Frequently Asked Questions</h3>
-            
+
               <div>
                 <div
                   className="accordion-button"
@@ -259,11 +259,11 @@ function App() {
                 <h4>Mark Tony</h4>
                 <h6>Software Developer</h6>
                 <div className="stars">
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
+                  <span><img src={star} /></span>
+                  <span><img src={star} /></span>
+                  <span><img src={star} /></span>
+                  <span><img src={star} /></span>
+                  <span><img src={star} /></span>
                 </div>
                 <p>
                   There are many variations of passages of Lorem Ipsum
