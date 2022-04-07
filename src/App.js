@@ -9,6 +9,10 @@ import icon4 from "./assets/images/icon4.svg";
 import icon5 from "./assets/images/icon5.svg";
 import faq from "./assets/images/faq.svg";
 import star from "./assets/images/star.svg";
+import email from "./assets/images/email.svg";
+import address from "./assets/images/address.svg";
+import plus from "./assets/images/plus.svg";
+import minus from "./assets/images/minus.svg";
 import TestimonialsImage from "./assets/images/TestimonialsImage.png";
 
 import {
@@ -40,9 +44,43 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Collapse, CardBody, Card, CardHeader } from "reactstrap";
 function App() {
   const [toggleQuestion, setToggequestion] = useState();
+  const [open, setOpen] = useState(false);
 
   const toggle = () => {
     setToggequestion(!toggleQuestion);
+  };
+
+  const handleServices = () => {
+    let element = document.getElementById("services");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+  const handleAboutUs = () => {
+    let element = document.getElementById("aboutUs");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+  const handleTestimonials = () => {
+    let element = document.getElementById("testimonial");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+  const handleFAQ = () => {
+    let element = document.getElementById("faq");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   };
   return (
     <>
@@ -51,31 +89,23 @@ function App() {
           <NavbarBrand href="/">
             <img className="logo" src={logo} alt="logo" />
           </NavbarBrand>
-          <NavbarToggler onClick={function noRefCheck() {}} />
-          <Collapse navbar>
+          <NavbarToggler onClick={() => setOpen(!open)} />
+          <Collapse isOpen={open} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Home</NavLink>
+                <NavLink>Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  Services
-                </NavLink>
+                <NavLink onClick={handleServices}>Services</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  About Us
-                </NavLink>
+                <NavLink onClick={handleAboutUs}>About Us</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  Testimonials
-                </NavLink>
+                <NavLink onClick={handleTestimonials}>Testimonials</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  FAQ
-                </NavLink>
+                <NavLink onClick={handleFAQ}>FAQ</NavLink>
               </NavItem>
               <UncontrolledDropdown inNavbar nav>
                 <Button className="common-btn">Contact Us</Button>
@@ -94,7 +124,7 @@ function App() {
           </div>
         </Container>
       </section>
-      <section className="why-you-need">
+      <section className="why-you-need" id="services">
         <Container fluid className="p-0">
           <h3 className="title-head text-center">What do you need</h3>
           <div className="service-outer">
@@ -161,8 +191,8 @@ function App() {
       </section>
       <section className="should-buy">
         <Container>
-          <Row>
-            <Col md={6}>
+          <Row xs="1" md="1">
+            <Col lg={6}>
               <div className="should-buy-polygon">
                 <div>
                   <h3 className="title-head">Should I buy or build?</h3>
@@ -178,7 +208,7 @@ function App() {
           </Row>
         </Container>
       </section>
-      <section className="faq">
+      <section className="faq" id="faq">
         <Container>
           <Row>
             <Col md={4} className="faq-img">
@@ -186,12 +216,11 @@ function App() {
             </Col>
             <Col md={8} className="faq-content">
               <h3 className="title-head">Frequently Asked Questions</h3>
-            
+
               <div>
                 <div
                   className="accordion-button"
                   onClick={() => setToggequestion(1)}
-                  style={{ marginBottom: "1rem" }}
                 >
                   What Is Software Development Outsourcing?
                 </div>
@@ -209,7 +238,6 @@ function App() {
                 <div
                   className="accordion-button"
                   onClick={() => setToggequestion(2)}
-                  style={{ marginBottom: "1rem" }}
                 >
                   What Are the Advantages of Software Outsourcing?
                 </div>
@@ -227,7 +255,6 @@ function App() {
                 <div
                   className="accordion-button"
                   onClick={() => setToggequestion(3)}
-                  style={{ marginBottom: "1rem" }}
                 >
                   How Does Outsourcing Work?
                 </div>
@@ -247,9 +274,9 @@ function App() {
           </Row>
         </Container>
       </section>
-      <section className="testimonial">
+      <section className="testimonial" id="testimonial">
         <Container>
-          <Carousel>
+          <Carousel showStatus={false} showIndicators={false}>
             <div className="slider-box">
               <div>
                 <img src={TestimonialsImage} />
@@ -259,11 +286,21 @@ function App() {
                 <h4>Mark Tony</h4>
                 <h6>Software Developer</h6>
                 <div className="stars">
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
-                  <span><img src={star}/></span>
+                  <span>
+                    <img src={star} />
+                  </span>
+                  <span>
+                    <img src={star} />
+                  </span>
+                  <span>
+                    <img src={star} />
+                  </span>
+                  <span>
+                    <img src={star} />
+                  </span>
+                  <span>
+                    <img src={star} />
+                  </span>
                 </div>
                 <p>
                   There are many variations of passages of Lorem Ipsum
@@ -310,8 +347,8 @@ function App() {
       </section>
       <section className="contact-us">
         <Container>
-          <Row>
-            <Col md={6} className="">
+          <Row xs="1" md="1" className="justify-content-around">
+            <Col lg={6}  className="">
               <div className="contact-form">
                 <h4>
                   Contact us to build the right product with the right team.
@@ -334,7 +371,7 @@ function App() {
                 </Form>
               </div>
             </Col>
-            <Col md={6} className="">
+            <Col lg={5}  className="">
               <h3 className="title-head">
                 Transform ideas into software system
               </h3>
@@ -349,17 +386,17 @@ function App() {
           </Row>
         </Container>
       </section>
-      <section className="footer">
+      <section className="footer" id="aboutUs">
         <Container>
-          <Row xs="4">
-            <Col md={4} className="">
+          <Row xs="1" md="2">
+            <Col lg={3} className="">
               <img className="footer-logo" src={footerLogo} alt="footer-img" />
               <p>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration.
               </p>
             </Col>
-            <Col md={2} className="">
+            <Col lg={2} className="">
               <h4>Quick Links</h4>
               <ul className="list-unstyled">
                 <li>
@@ -376,7 +413,7 @@ function App() {
                 </li>
               </ul>
             </Col>
-            <Col md={2} className="">
+            <Col lg={3} className="">
               <h4>Services</h4>
               <ul className="list-unstyled">
                 <li>
@@ -393,8 +430,22 @@ function App() {
                 </li>
               </ul>
             </Col>
-            <Col md={4} className="">
+            <Col lg={3} className="">
               <h4>Contact Us</h4>
+              <p className="contact-details">
+                <img src={email} />
+                <span>
+                  Email:{" "}
+                  <a href="mailto:highpointetech@gmail.com">
+                    highpointetech@gmail.com
+                  </a>
+                </span>
+              </p>
+              <p className="contact-details">
+                <img src={address} />
+                <span> Address:</span>
+                <a href="">1234, ABS Suite 330 NJ, USA 84043</a>
+              </p>
             </Col>
           </Row>
           <p className="copyright">
