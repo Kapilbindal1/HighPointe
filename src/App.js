@@ -55,7 +55,7 @@ function App() {
           <Collapse navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Homesasdasbdjkas</NavLink>
+                <NavLink href="/components/">Homesaiouashydiuasbjkd</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">
