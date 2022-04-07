@@ -444,7 +444,7 @@ function App() {
               <p className="contact-details">
                 <img src={address} />
                 <span> Address:</span>
-                <a href="">1234, ABS Suite 330 NJ, USA 84043</a>
+                 <a href="">1234, ABS Suite 330 NJ, USA 84043</a>
               </p>
             </Col>
           </Row>
