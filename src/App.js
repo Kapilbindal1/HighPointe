@@ -279,7 +279,7 @@ function App() {
           <Carousel showStatus={false} showIndicators={false}>
             <div className="slider-box">
               <div>
-                <img src={TestimonialsImage} />
+                <img className="testi-img" src={TestimonialsImage} />
               </div>
               <div className="slider-content">
                 <h3>Love from Clients</h3>
@@ -312,7 +312,7 @@ function App() {
             </div>
             <div className="slider-box">
               <div>
-                <img src={TestimonialsImage} />
+              <img className="testi-img" src={TestimonialsImage} />
               </div>
               <div className="slider-content">
                 <h3>Love from Clients</h3>
@@ -328,7 +328,7 @@ function App() {
             </div>
             <div className="slider-box">
               <div>
-                <img src={TestimonialsImage} />
+              <img className="testi-img" src={TestimonialsImage} />
               </div>
               <div className="slider-content">
                 <h3>Love from Clients</h3>
