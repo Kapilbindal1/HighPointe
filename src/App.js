@@ -36,7 +36,7 @@ import {
   FormGroup,
   Form,
   Input,
-  Label,
+  Label
 } from "reactstrap";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -385,6 +385,38 @@ function App() {
             </Col>
           </Row>
         </Container>
+      </section>
+      <section className="py-5 get-a-quote">
+      <Container>
+      
+          <Row xs="1" md="2">
+            <Col lg={6} className="">
+            <div className="contact-form">
+                <h4>
+                Get A Free Quote
+                </h4>
+                <Form>
+                  <FormGroup>
+                    <Input placeholder="your name" type="text" />
+                  </FormGroup>
+                  <FormGroup>
+                    <Input placeholder="your Email" type="email" />
+                  </FormGroup>
+                  <FormGroup>
+                    <Input placeholder="your Phone Number" type="text" />
+                  </FormGroup>
+                  <FormGroup>
+                  <Input
+     placeholder="Message"
+      type="textarea"
+    />
+                  </FormGroup>
+                  <Button className="common-btn">Submit</Button>
+                </Form>
+              </div>
+             </Col>
+        </Row>
+              </Container>
       </section>
       <section className="footer" id="aboutUs">
         <Container>
