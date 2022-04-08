@@ -9,7 +9,7 @@ import icon4 from "./assets/images/icon4.svg";
 import icon5 from "./assets/images/icon5.svg";
 import faq from "./assets/images/faq.svg";
 import star from "./assets/images/star.svg";
-import email from "./assets/images/email.svg";
+import email from "./assets/images/Email.svg";
 import address from "./assets/images/address.svg";
 import plus from "./assets/images/plus.svg";
 import minus from "./assets/images/minus.svg";
@@ -453,7 +453,7 @@ function App() {
           </p>
         </Container>
       </section>
-      
+
     </>
   );
 }
