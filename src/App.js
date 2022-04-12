@@ -65,6 +65,14 @@ function App() {
       inline: "nearest",
     });
   };
+  const handleContactUs = () => {
+    let element = document.getElementById("contact-us");
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
   const handleTestimonials = () => {
     let element = document.getElementById("testimonial");
     element.scrollIntoView({
@@ -98,9 +106,9 @@ function App() {
               <NavItem>
                 <NavLink onClick={handleServices}>Services</NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink onClick={handleAboutUs}>About Us</NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink onClick={handleTestimonials}>Testimonials</NavLink>
               </NavItem>
@@ -108,7 +116,7 @@ function App() {
                 <NavLink onClick={handleFAQ}>FAQ</NavLink>
               </NavItem>
               <UncontrolledDropdown inNavbar nav>
-                <Button className="common-btn">Contact Us</Button>
+                <Button onClick={handleContactUs} className="common-btn">Contact Us</Button>
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
@@ -384,7 +392,7 @@ function App() {
           </Carousel>
         </Container>
       </section>
-      <section className="contact-us">
+      <section className="contact-us" id="contact-us">
         <Container>
           <Row xs="1" md="1" className="justify-content-around">
             <Col lg={6} className="">
@@ -471,9 +479,9 @@ function App() {
               <li>
                   <a onClick={handleServices} >Services</a>
                 </li>
-                <li>
+                {/* <li>
                   <a onClick={handleAboutUs}>About Us</a>
-                </li>
+                </li> */}
                 <li>
                   <a onClick={handleTestimonials}>Testimonials</a>
                 </li>
