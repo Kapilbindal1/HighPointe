@@ -47,17 +47,18 @@ p {
    min-height: unset;
    padding: 40px 0px;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     min-height: 600px;
    }
   .banner-content {
-    @media screen and (max-width: 1200px) {
+    max-width: 900px;
+    @media screen and (max-width: 1300px) {
      max-width: 800px;
     }
     h2 {
       font-style: normal;
       font-weight: 900;
-      font-size: 57px;
+      font-size: 55px;
       line-height: 81px;
       letter-spacing: 0.03em;
       color: #000000;
@@ -65,9 +66,9 @@ p {
         font-size: 20px;
         line-height: 32px;
       }
-      @media screen and (max-width: 1200px) {
-        font-size:47px;
-        line-height: 64px;
+      @media screen and (max-width: 1300px) {
+        font-size: 40px;
+        line-height: 50px;
       }
     }
     h4 {
@@ -80,7 +81,7 @@ p {
         font-size: 18px;
         line-height: unset;
       }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1300px) {
         font-size: 30px;
       }
     }
@@ -94,7 +95,7 @@ p {
         font-size: 14px;
         line-height: unset;
       }
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 1300px) {
         font-size: 25px;
       }
     }
@@ -126,11 +127,11 @@ p {
 .title-head {
   font-style: normal;
   font-weight: 900;
-  font-size: 43px;
+  font-size: 38px;
   line-height: 72px;
   letter-spacing: 0.02em;
   color: #000000;
-  margin-bottom: 53px;
+  margin-bottom: 30px;
   @media screen and (max-width:767px) {
     font-size: 25px;
     margin-bottom: 20px;
@@ -142,6 +143,9 @@ p {
   flex-wrap: wrap;
   img {
     max-width: 100%;
+    @media screen and (max-width:1300px) {
+      max-width: 70%;
+    }
   }
 }
 .why-you-need {
@@ -169,16 +173,19 @@ p {
       position: unset;
       margin: 0px 20px;
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1300px) {
         margin-right: 15px;
         width: 75%;
         top: 30px;
+        padding: 20px;
       }
     .need-services-box {
       max-width: 50%;
-      margin-bottom: 40px;
-      @media screen and (max-width:767px) {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
+      padding: 0px 8px;
+      @media screen and (max-width:1300px) {
+        margin-bottom: 10px;
+        padding: 0px 10px;
       }
       &:last-child {
         margin-bottom: 0px;
@@ -186,7 +193,7 @@ p {
       img {
         margin-bottom: 30px;
         width: 80px;
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width:1300px) {
           width: 50px;
           margin-bottom: 15px;
          
@@ -194,7 +201,7 @@ p {
       }
       h4 {
         font-weight: 900;
-        font-size: 35px;
+        font-size: 28px;
         line-height: 42px;
         letter-spacing: 0.02em;
         text-transform: capitalize;
@@ -204,8 +211,10 @@ p {
           font-size: 17px;
           line-height: 23px;
         }
-        @media screen and (max-width:1200px) {
-          font-size: 28px;
+        @media screen and (max-width:1300px) {
+          font-size: 24px;
+          line-height: unset;
+          margin: 0;
         }
       }
       h6 {
@@ -219,18 +228,19 @@ p {
           font-size: 15px;
           line-height: 18px;
         }
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width:1300px) {
           font-size: 18px;
+          margin-bottom: 8px;
          
         }
       }
       p {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 29px;
         letter-spacing: 0.02em;
         color: #000000;
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width:1300px) {
           font-size: 14px;
           line-height: 22px;
         }
@@ -245,13 +255,13 @@ p {
   @media screen and (max-width: 767px) {
     padding: 20px 0;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     padding: 50px 0;
   }
 }
 .testimonial {
   padding: 100px 0;
-  @media screen and (max-width:767px) {
+  @media screen and (max-width:1300px) {
     padding: 50px 0;
   }
  
@@ -265,13 +275,16 @@ p {
         width: 145px;
         margin-bottom: 20px;
       }
-      @media screen and (max-width:1200px) {
+      @media screen and (max-width:1300px) {
         width: 350px;
       }
     }
     .stars {
       display: flex;
       margin-bottom: 30px;
+      @media screen and (max-width:1300px) {
+        margin-bottom: 15px;
+      }
       img {
         width: 22px;
       }
@@ -289,15 +302,20 @@ p {
     }
     h3 {
       font-weight: 900;
-      font-size: 45px;
-      line-height: 72px;
+      font-size: 40px;
+      line-height: 45px;
       letter-spacing: 0.02em;
       color: #000000;
-      margin-bottom: 20px;
+   
       @media screen and (max-width:767px) {
         font-size: 25px;
         line-height: 20px;
-        margin: 0;
+     
+      }
+      @media screen and (max-width:1300px) {
+        font-size: 30px;
+        line-height: unset;
+       
       }
     }
     h4 {
@@ -311,6 +329,11 @@ p {
         font-size: 20px;
         line-height: 42px;
       }
+      @media screen and (max-width:1300px) {
+        font-size: 22px;
+        margin: 0;
+        line-height: unset;
+      }
     }
     h6 {
       font-weight: 400;
@@ -322,12 +345,16 @@ p {
         font-size: 20px;
         line-height: 26px;
       }
-    }
-    p{
-      @media screen and (max-width:767px) {
-        font-size: 14px;
+      @media screen and (max-width:1300px) {
+        font-size: 20px;
+        line-height: 26px;
       }
     }
+    p{
+      @media screen and (max-width:1300px) {
+        font-size: 14px;
+      }
+    }  
   }
   .carousel.carousel-slider {
     .control-arrow {
@@ -356,7 +383,7 @@ p {
       &.control-next:before {
         border: 0;
         background-image: url("../images/next.svg");
-        width: 18px;
+        width: 13px;
         height: 21px;
         background-repeat: no-repeat;
         background-size: 14px;
@@ -401,7 +428,7 @@ p {
     min-height: unset;
     background-position: left;
   }
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width:1300px) {
     min-height: 600px;
   }
   .should-buy-polygon {
@@ -421,7 +448,7 @@ p {
       height: unset;
       padding: 0;
     }
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:1300px) {
       height: 61vh;
     }
     .title-head {
@@ -429,7 +456,7 @@ p {
       @media screen and (max-width:767px) {
         margin-bottom: 0;
       }
-      @media screen and (max-width:1200px) {
+      @media screen and (max-width:1300px) {
         font-size: 28px;
         margin-bottom: 0;
       }
@@ -448,7 +475,7 @@ p {
     line-height: 52px;
     position: relative;
     padding-top: 15px;
-    @media screen and(max-width:1200px) {
+    @media screen and(max-width:1300px) {
       font-size: 25px;
       line-height: 30px;
       margin-top: 50px;
@@ -472,7 +499,7 @@ p {
 .faq {
   background: rgba(246, 243, 255, 0.95);
   padding: 100px 0;
-  @media screen and (max-width:767px) {
+  @media screen and (max-width:1300px) {
     padding: 50px 0;
   }
   .accordion-button {
@@ -493,10 +520,18 @@ p {
       font-size: 18px;
       line-height: 27px;
     }
+    @media screen and (max-width:1300px) {
+      font-size: 22px;
+    }
   }
   .title-head{
     @media screen and (max-width: 767px){
     font-size: 25px;
+    margin-bottom: 15px;
+
+  }
+  @media screen and (max-width: 767px){
+    font-size: 30px;
     margin-bottom: 15px;
 
   }
@@ -510,7 +545,7 @@ p {
       line-height: 38px;
       letter-spacing: 0.02em;
       color: #000000;
-      @media screen and (max-width:767px) {
+      @media screen and (max-width:1300px) {
         font-size: 15px;
         line-height: 30px;
       }
@@ -518,10 +553,10 @@ p {
   }
   .faq-img {
     img {
-      width: 300px;
+      width: 250px;
       max-width: 100%;
-      @media screen and (max-width:1200px) {
-        width: 200px;
+      @media screen and (max-width:1300px) {
+        width: 180px;
         margin: 0 auto;
         display: table;
       }
@@ -531,8 +566,9 @@ p {
     }
   }
 .title-head{
-  @media screen and (max-width:767px) {
-    margin-bottom: 20px;
+  @media screen and (max-width:1300px) {
+    margin-bottom: 10px;
+    font-size: 35px;
   }
 }
 }
@@ -671,8 +707,8 @@ p {
       font-size: 24px;
       line-height: 37px;
     }
-    @media screen and (max-width:1200px) {
-      font-size: 28px;
+    @media screen and (max-width:1300px) {
+      font-size: 26px;
       line-height: 35px;
     }
   }

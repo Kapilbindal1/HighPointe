@@ -386,7 +386,7 @@ function App() {
           </Row>
         </Container>
       </section>
-      <section className="py-5 get-a-quote">
+      {/* <section className="py-5 get-a-quote">
       <Container>
       
           <Row xs="1" md="2">
@@ -417,7 +417,7 @@ function App() {
              </Col>
         </Row>
               </Container>
-      </section>
+      </section> */}
       <section className="footer" id="aboutUs">
         <Container>
           <Row xs="1" md="2">
