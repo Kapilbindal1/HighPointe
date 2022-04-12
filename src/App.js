@@ -36,19 +36,18 @@ import {
   FormGroup,
   Form,
   Input,
-  Label
+  Label,
 } from "reactstrap";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import { Collapse, CardBody, Card, CardHeader } from "reactstrap";
+import { Collapse } from "reactstrap";
 function App() {
-  const [toggleQuestion, setToggequestion] = useState();
-  const [open, setOpen] = useState(false);
+  const [toggleQuestion, setToggequestion] = useState(false);
+  const [toggleQuestion1, setToggequestion1] = useState(false);
+  const [toggleQuestion2, setToggequestion2] = useState(false);
 
-  const toggle = () => {
-    setToggequestion(!toggleQuestion);
-  };
+  const [open, setOpen] = useState(false);
 
   const handleServices = () => {
     let element = document.getElementById("services");
@@ -133,9 +132,14 @@ function App() {
             </div>
             <div className="why-you-need-services">
               <div className="need-services-box">
-                <img src={icon1} alt="icon1" />
-                <h4>A technology partner</h4>
-                <h6>Full services, Dev-Team-in-a-box</h6>
+                <div className="need-service-head">
+                  <img src={icon1} alt="icon1" />
+                  <div>
+                    <h4>A technology partner</h4>
+                    <h6>Full services, Dev-Team-in-a-box</h6>
+                  </div>
+                </div>
+
                 <p>
                   We produce digital transformation roadmaps and implement
                   technologies that become growth drivers for our customers’
@@ -143,18 +147,28 @@ function App() {
                 </p>
               </div>
               <div className="need-services-box">
-                <img src={icon2} alt="icon2" />
-                <h4>A Web Application</h4>
-                <h6>Branding UX Development Integration</h6>
+                <div className="need-service-head">
+                  <img src={icon2} alt="icon2" />
+                  <div>
+                    <h4>A Web Application</h4>
+                    <h6>Branding UX Development Integration</h6>
+                  </div>
+                </div>
+
                 <p>
                   Leverage elegant, intelligent, and immersive digital
                   experiences and similarly as your business goals.
                 </p>
               </div>
               <div className="need-services-box">
-                <img src={icon3} alt="icon3" />
-                <h4>An augmented Dev Team</h4>
-                <h6>Top talent Full control Scalable</h6>
+                <div className="need-service-head">
+                  <img src={icon3} alt="icon3" />
+                  <div>
+                    <h4>An augmented Dev Team</h4>
+                    <h6>Top talent Full control Scalable</h6>
+                  </div>
+                </div>
+
                 <p>
                   Achieve a bigger business and a quicker time to market by
                   eliminating bottlenecks in package development with Services.
@@ -164,9 +178,14 @@ function App() {
                 </p>
               </div>
               <div className="need-services-box">
-                <img src={icon4} alt="icon4" />
-                <h4>A mobile app</h4>
-                <h6>Branding・UX・Development・iOS & Android</h6>
+                <div className="need-service-head">
+                  <img src={icon4} alt="icon4" />
+                  <div>
+                    <h4>A mobile app</h4>
+                    <h6>Branding・UX・Development・iOS & Android</h6>
+                  </div>
+                </div>
+
                 <p>
                   Our software development company delivers company and client
                   applications based on our profound understanding of
@@ -176,9 +195,15 @@ function App() {
                 </p>
               </div>
               <div className="need-services-box">
-                <img src={icon5} alt="icon5" />
-                <h4>A digital transformation</h4>
+              <div className="need-service-head">
+              <img src={icon5} alt="icon5" />
+              <div>
+              <h4>A digital transformation</h4>
                 <h6>CTO-level expertise Architecturing Development</h6>
+              </div>
+              
+                </div>
+               
                 <p>
                   We place along software ecosystems that alter end-to-end
                   method automation, data-driven deciding, and productive
@@ -219,12 +244,16 @@ function App() {
 
               <div>
                 <div
-                  className="accordion-button"
-                  onClick={() => setToggequestion(1)}
+                  className={
+                    toggleQuestion
+                      ? "accordion-button  closeTab"
+                      : "accordion-button"
+                  }
+                  onClick={() => setToggequestion(!toggleQuestion)}
                 >
                   What Is Software Development Outsourcing?
                 </div>
-                <Collapse isOpen={toggleQuestion === 1 ? true : false}>
+                <Collapse isOpen={toggleQuestion}>
                   <div className="accordion-item">
                     <p>
                       Software development outsourcing services are used by
@@ -236,12 +265,16 @@ function App() {
                   </div>
                 </Collapse>
                 <div
-                  className="accordion-button"
-                  onClick={() => setToggequestion(2)}
+                  className={
+                    toggleQuestion1
+                      ? "accordion-button  closeTab"
+                      : "accordion-button"
+                  }
+                  onClick={() => setToggequestion1(!toggleQuestion1)}
                 >
                   What Are the Advantages of Software Outsourcing?
                 </div>
-                <Collapse isOpen={toggleQuestion === 2 ? true : false}>
+                <Collapse isOpen={toggleQuestion1}>
                   <div className="accordion-item">
                     <p>
                       Software development outsourcing services are used by
@@ -253,12 +286,16 @@ function App() {
                   </div>
                 </Collapse>
                 <div
-                  className="accordion-button"
-                  onClick={() => setToggequestion(3)}
+                  className={
+                    toggleQuestion2
+                      ? "accordion-button  closeTab"
+                      : "accordion-button"
+                  }
+                  onClick={() => setToggequestion2(!toggleQuestion2)}
                 >
                   How Does Outsourcing Work?
                 </div>
-                <Collapse isOpen={toggleQuestion === 3 ? true : false}>
+                <Collapse isOpen={toggleQuestion2}>
                   <div className="accordion-item">
                     <p>
                       Software development outsourcing services are used by
@@ -312,7 +349,7 @@ function App() {
             </div>
             <div className="slider-box">
               <div>
-              <img className="testi-img" src={TestimonialsImage} />
+                <img className="testi-img" src={TestimonialsImage} />
               </div>
               <div className="slider-content">
                 <h3>Love from Clients</h3>
@@ -328,7 +365,7 @@ function App() {
             </div>
             <div className="slider-box">
               <div>
-              <img className="testi-img" src={TestimonialsImage} />
+                <img className="testi-img" src={TestimonialsImage} />
               </div>
               <div className="slider-content">
                 <h3>Love from Clients</h3>
@@ -348,11 +385,10 @@ function App() {
       <section className="contact-us">
         <Container>
           <Row xs="1" md="1" className="justify-content-around">
-            <Col lg={6}  className="">
+            <Col lg={6} className="">
               <div className="contact-form">
-                <h4>
-                  Contact us to build the right product with the right team.
-                </h4>
+                <h4>Contact us</h4>
+                <h5>To build the right product with the right team.</h5>
                 <Form>
                   <FormGroup>
                     <Input placeholder="your name" type="text" />
@@ -371,7 +407,7 @@ function App() {
                 </Form>
               </div>
             </Col>
-            <Col lg={5}  className="">
+            <Col lg={5} className="">
               <h3 className="title-head">
                 Transform ideas into software system
               </h3>
@@ -421,31 +457,31 @@ function App() {
       <section className="footer" id="aboutUs">
         <Container>
           <Row xs="1" md="2">
-            <Col lg={3} className="">
+            <Col lg={4} className="">
               <img className="footer-logo" src={footerLogo} alt="footer-img" />
               <p>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration.
               </p>
             </Col>
-            <Col lg={2} className="">
+            <Col lg={4} className="">
               <h4>Quick Links</h4>
               <ul className="list-unstyled">
                 <li>
                   <a href="">About Us</a>
                 </li>
                 <li>
-                  <a href="">Testimonials</a>
+                  <a onClick={handleTestimonials}>Testimonials</a>
                 </li>
-                <li>
-                  <a href="">FAQ</a>
+                <li style={{ cursor: "pointer" }}>
+                  <a onClick={handleFAQ}>FAQ</a>
                 </li>
                 <li>
                   <a href="">Privacy Policy</a>
                 </li>
               </ul>
             </Col>
-            <Col lg={3} className="">
+            {/* <Col lg={3} className="">
               <h4>Services</h4>
               <ul className="list-unstyled">
                 <li>
@@ -461,8 +497,8 @@ function App() {
                   <a href="">A digital transformation</a>
                 </li>
               </ul>
-            </Col>
-            <Col lg={3} className="">
+            </Col> */}
+            <Col lg={4} className="">
               <h4>Contact Us</h4>
               <p className="contact-details">
                 <img src={email} />
@@ -476,7 +512,7 @@ function App() {
               <p className="contact-details">
                 <img src={address} />
                 <span> Address:</span>
-                 <a href="">1234, ABS Suite 330 NJ, USA 84043</a>
+                <a href="">1234, ABS Suite 330 NJ, USA 84043</a>
               </p>
             </Col>
           </Row>
@@ -485,7 +521,6 @@ function App() {
           </p>
         </Container>
       </section>
-
     </>
   );
 }
