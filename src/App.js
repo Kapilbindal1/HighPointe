@@ -83,6 +83,7 @@ function App() {
   };
   return (
     <>
+    <header>
       <Container>
         <Navbar expand="md" light>
           <NavbarBrand href="/">
@@ -113,6 +114,7 @@ function App() {
           </Collapse>
         </Navbar>
       </Container>
+      </header>
       <section className="banner">
         <Container>
           <div className="banner-content">
@@ -460,25 +462,25 @@ function App() {
             <Col lg={4} className="">
               <img className="footer-logo" src={footerLogo} alt="footer-img" />
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration.
+              Custom software development Accelerating Your Journey. Innovate. Optimize. Automate. Software that achieves business results
               </p>
             </Col>
             <Col lg={4} className="">
               <h4>Quick Links</h4>
               <ul className="list-unstyled">
+              <li>
+                  <a onClick={handleServices} >Services</a>
+                </li>
                 <li>
-                  <a href="">About Us</a>
+                  <a onClick={handleAboutUs}>About Us</a>
                 </li>
                 <li>
                   <a onClick={handleTestimonials}>Testimonials</a>
                 </li>
-                <li style={{ cursor: "pointer" }}>
+                <li >
                   <a onClick={handleFAQ}>FAQ</a>
                 </li>
-                <li>
-                  <a href="">Privacy Policy</a>
-                </li>
+               
               </ul>
             </Col>
             {/* <Col lg={3} className="">

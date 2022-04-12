@@ -11,6 +11,12 @@ p {
     font-size: 14px;
   }
 }
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 9;
+}
 .logo {
   width: 159px;
 }
@@ -45,7 +51,7 @@ p {
   max-height: 80vh;
   
   @media screen and (max-width: 1300px) {
-    min-height: 600px;
+    min-height: 500px;
     background-position: top left;
   }
   @media screen and (max-width: 767px) {
@@ -196,8 +202,9 @@ p {
       .need-service-head {
         display: flex;
         align-items: center;
-      
+      @media screen and (max-width:767px) {
         flex-wrap: wrap;
+      }
       }
       @media screen and (max-width: 1300px) {
         margin-bottom: 10px;
@@ -449,7 +456,8 @@ p {
   padding: 34px 0;
   
   @media screen and (max-width: 1300px) {
-    min-height: 600px;
+    min-height: 540px;
+    background-position: bottom;
   }
   @media screen and (max-width: 767px) {
     height: 350px;
@@ -471,8 +479,9 @@ p {
     min-height: 500px;
    
     @media screen and (max-width: 1300px) {
-      height: 61vh;
-      max-width: 500px;
+      height: 50vh;
+    max-width: 500px;
+    text-align: center;
     }
     @media screen and (max-width: 767px) {
       height: 300px;
@@ -558,7 +567,7 @@ p {
     }
     
     @media screen and (max-width: 1300px) {
-      font-size: 22px;
+      font-size: 20px;
     }
     @media screen and (max-width: 767px) {
       font-size: 18px;
@@ -573,7 +582,7 @@ p {
   }
   .title-head {
     @media screen and (max-width: 1300px) {
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 15px;
     }
     @media screen and (max-width: 767px) {
