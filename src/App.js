@@ -109,11 +109,11 @@ function App() {
               {/* <NavItem>
                 <NavLink onClick={handleAboutUs}>About Us</NavLink>
               </NavItem> */}
-              <NavItem>
-                <NavLink onClick={handleTestimonials}>Testimonials</NavLink>
+                 <NavItem>
+                <NavLink onClick={handleFAQ}>FAQ</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink onClick={handleFAQ}>FAQ</NavLink>
+                <NavLink onClick={handleTestimonials}>Testimonials</NavLink>
               </NavItem>
               <UncontrolledDropdown inNavbar nav>
                 <Button onClick={handleContactUs} className="common-btn">Contact Us</Button>
@@ -129,7 +129,7 @@ function App() {
             <h2>Custom software development Accelerating Your Journey</h2>
             <h4>Innovate. Optimize. Automate.</h4>
             <h5>Software that achieves business results</h5>
-            <Button className="common-btn">Contact Us</Button>
+            <Button onClick={handleContactUs} className="common-btn">Contact Us</Button>
           </div>
         </Container>
       </section>
@@ -403,14 +403,14 @@ function App() {
                   <FormGroup>
                     <Input placeholder="your name" type="text" />
                   </FormGroup>
-                  <FormGroup>
+                  {/* <FormGroup>
                     <Input placeholder="your Email Address" type="email" />
-                  </FormGroup>
-                  <FormGroup>
+                  </FormGroup> */}
+                  {/* <FormGroup>
                     <Input placeholder="your Phone Number" type="text" />
-                  </FormGroup>
+                  </FormGroup> */}
                   <FormGroup>
-                    <Input placeholder="Share your thoughtsr" type="text" />
+                    <Input placeholder="What can we do for you?" type="text" />
                   </FormGroup>
 
                   <Button className="common-btn">Submit</Button>
@@ -482,11 +482,11 @@ function App() {
                 {/* <li>
                   <a onClick={handleAboutUs}>About Us</a>
                 </li> */}
+                    <li >
+                  <a onClick={handleFAQ}>FAQ</a>
+                </li>
                 <li>
                   <a onClick={handleTestimonials}>Testimonials</a>
-                </li>
-                <li >
-                  <a onClick={handleFAQ}>FAQ</a>
                 </li>
                
               </ul>
@@ -514,15 +514,15 @@ function App() {
                 <img src={email} />
                 <span>
                   Email:{" "}
-                  <a href="mailto:highpointetech@gmail.com">
-                    highpointetech@gmail.com
+                  <a href="mailto:contact@hightpointe.tech">
+                  contact@hightpointe.tech
                   </a>
                 </span>
               </p>
               <p className="contact-details">
                 <img src={address} />
                 <span> Address:</span>
-                <a href="">1234, ABS Suite 330 NJ, USA 84043</a>
+                <a href="">548 Market St, Suite #42013, San Francisco, CA 94104</a>
               </p>
             </Col>
           </Row>
