@@ -403,9 +403,9 @@ function App() {
                   <FormGroup>
                     <Input placeholder="your name" type="text" />
                   </FormGroup>
-                  {/* <FormGroup>
+                  <FormGroup>
                     <Input placeholder="your Email Address" type="email" />
-                  </FormGroup> */}
+                  </FormGroup>
                   {/* <FormGroup>
                     <Input placeholder="your Phone Number" type="text" />
                   </FormGroup> */}
